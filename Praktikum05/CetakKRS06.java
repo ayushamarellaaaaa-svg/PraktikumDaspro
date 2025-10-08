@@ -5,7 +5,7 @@ public class CetakKRS06 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("--- Cetak KRS SIAKAD ---");
-        System.out.println("Apakah UKT sudah lunas? (true/false): ");
+        System.out.println("Apakah UKT sudah lunas? (sudah/belum): ");
         boolean uktLunas = sc.nextBoolean();
 
         if (uktLunas) {
