@@ -28,5 +28,7 @@ public class UjianSkripsiNested06 {
             pesan = "Gagal! Mahasiswa masih memiliki tanggungan";
         }
 
+        System.out.println(pesan);
+
     }
 }
