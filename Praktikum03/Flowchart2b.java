@@ -16,7 +16,7 @@ public class Flowchart2b {
 
         tarifListrik = 1500 * dayaListrik;
         biayaBulanan = 50000 + tarifListrik;
-        potongan = 0.1 * biayaBulanan;
+        potongan = PPN * biayaBulanan;
         totalBiaya = tarifListrik + biayaBulanan;
 
         System.out.println("Total biaya tarif listrik = "+totalBiaya);
