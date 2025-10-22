@@ -1,6 +1,8 @@
+package Praktikum06;
+
 import java.util.Scanner;
 
-public class Flowchart2a {
+public class Latihan1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -10,6 +12,8 @@ public class Flowchart2a {
         int lamaSewa;
         int jarakTempuh;
         int totalBiaya;
+        String bahanBakar;
+        int hargaPerKm = 0;
 
         System.out.println("Masukkan lama sewa mobil (per hari) = ");
         lamaSewa = sc.nextInt();
@@ -17,12 +21,22 @@ public class Flowchart2a {
         System.out.println("Masukkan jarak tempuh (per KM) = ");
         jarakTempuh = sc.nextInt();
 
+        System.out.println("Masukkan jenis bahan bakar (pertalite/pertamax) = ");
+        bahanBakar = sc.next();
+
+        if (bahanBakar.equalsIgnoreCase("pertalite")) {
+            hargaPerKm = 1000;
+        } else if (bahanBakar.equalsIgnoreCase("pertamax")) {
+            hargaPerKm = 1300;
+        } else {
+            System.out.println("Jenis bahan bakar tidak ada");
+        }
+
         biayaSewa = 300000 * lamaSewa;
         biayaSupir = 200000 * lamaSewa;
-        biayaBahanBakar = 1000 * jarakTempuh;
+        biayaBahanBakar = hargaPerKm * jarakTempuh;
         totalBiaya = biayaSewa + biayaSupir + biayaBahanBakar;
 
         System.out.println("Total biaya sewa mobil = " + totalBiaya);
-
     }
 }

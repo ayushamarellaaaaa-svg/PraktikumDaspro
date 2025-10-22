@@ -1,6 +1,8 @@
+package Praktikum06;
+
 import java.util.Scanner;
 
-public class Flowchart2a {
+public class Latihan2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -10,6 +12,7 @@ public class Flowchart2a {
         int lamaSewa;
         int jarakTempuh;
         int totalBiaya;
+        double diskon;
 
         System.out.println("Masukkan lama sewa mobil (per hari) = ");
         lamaSewa = sc.nextInt();
@@ -22,7 +25,11 @@ public class Flowchart2a {
         biayaBahanBakar = 1000 * jarakTempuh;
         totalBiaya = biayaSewa + biayaSupir + biayaBahanBakar;
 
-        System.out.println("Total biaya sewa mobil = " + totalBiaya);
+        if (totalBiaya >= 200000) {
+            diskon = 0.05 * totalBiaya;
+            totalBiaya = totalBiaya - (int) diskon;
+        } 
 
+        System.out.println("Total biaya sewa mobil = " + totalBiaya);
     }
 }
