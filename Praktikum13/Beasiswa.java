@@ -95,9 +95,9 @@ public class Beasiswa {
         }
 
         System.out.println("\nDaftar Pendaftar Beasiswa");
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------");
         System.out.printf("%-15s %-15s %-10s %-10s %-10s\n", "Nama", "NIM", "IPK", "Jenis", "Penghasilan");
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------");
 
         for (Pendaftar p : list) {
             System.out.printf("%-15s %-15s %-10.2f %-10s %-10d\n", p.nama, p.nim, p.ipk, p.jenis, p.penghasilan);
